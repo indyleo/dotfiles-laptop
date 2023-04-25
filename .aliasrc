@@ -1,0 +1,208 @@
+# Changing ls To lsd
+alias ls='lsd --group-directories-first --color auto' # Basic Lsd But with Some Nice Flags
+alias la='lsd -A --group-directories-first --color auto' # Show Hidden Files
+alias ll='lsd -lhF --group-directories-first --color auto' # Show In Listing Form 
+alias l='lsd -AlFh --group-directories-first --color auto' # My Favourite
+alias l.='lsd -A | egrep "^\."' # Show Only Hidden File
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# HeadsetControl Aliases
+alias h1='headsetcontrol -l 0'
+alias hb='headsetcontrol -b'
+alias hc='headsetcontrol'
+
+# PS Aliases
+alias psa="ps auxf"
+alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
+alias psmem='ps auxf | sort -nr -k 4'
+alias pscpu='ps auxf | sort -nr -k 3'
+
+# Confirm Before Doing Something Or The Output Being Verbose Or Both
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias ln='ln -i'
+alias rmdir='rmdir -v'
+alias mkdir='mkdir -pv'
+
+# Nice Aliases To Have
+alias wq='exit'
+alias rn='ranger'
+alias src='source'
+alias df='df -h'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Wallpaper Aliases
+alias wal='find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch'
+alias fehr='~/.fehbg'
+alias fehw='feh --randomize --bg-fill ~/Pictures/Wallpapers/'
+alias nitr='nitrogen --restore'
+alias nran='nitrogen --random ~/Pictures/Wallpapers/'
+
+# Get Error Messages From Journalctl
+alias jctl='journalctl -p 3 -xb'
+
+# Yt-dlp Aliases
+alias yta-aac='yt-dlp --extract-audio --audio-format aac '
+alias yta-best='yt-dlp --extract-audio --audio-format best '
+alias yta-flac='yt-dlp --extract-audio --audio-format flac '
+alias yta-m4a='yt-dlp --extract-audio --audio-format m4a '
+alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
+alias yta-opus='yt-dlp --extract-audio --audio-format opus '
+alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
+alias yta-wav='yt-dlp --extract-audio --audio-format wav '
+alias ytv-best='yt-dlp -f bestvideo+bestaudio '
+
+# The Terminal Rickroll
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+# Load Xresources
+alias load='xrdb -load ~/.Xresources'
+
+# Merge Xresources
+alias merge='xrdb -merge ~/.Xresources'
+
+# Easier Navigation
+up () {
+  local d=""
+  local limit="$1"
+
+  # Default to limit of 1
+  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
+    limit=1
+  fi
+
+  for ((i=1;i<=limit;i++)); do
+    d="../$d"
+  done
+
+  # perform cd. Show error if cd fails
+  if ! cd "$d"; then
+    echo "Couldn't go up $limit dirs.";
+  fi
+}
+
+# Audio Aliases
+alias playwav='rythmbox *.wav'
+alias playogg='rythmbox *.ogg'
+alias playmp3='rythmbox *.mp3'
+
+# Video Aliases
+alias playavi='vlc *.avi'
+alias playmov='vlc *.mov'
+alias playmp4='vlc *.mp4'
+
+# Neovim Aliases
+alias vim='nvim'
+alias svim='sudo nvim'
+alias zconf='nvim $HOME/.zshrc'
+alias bconf='nvim $HOME/.bashrc'
+alias aconf='nvim $HOME/.aliasrc'
+alias atconf='nvim $HOME/.config/alacritty/alacritty.yml'
+alias piconf='nvim $HOME/.config/picom/picom.conf'
+alias wmconf='nvim $HOME/.config/awesome/rc.lua'
+alias viconf='nvim $HOME/.config/nvim/init.lua'
+alias poconf='nvim $HOME/.config/polybar/config'
+
+# Trash Aliases
+alias trash='trash -iv'
+alias trashl='trash-list'
+alias trashr='trash-restore'
+alias trashrm='trash-rm'
+alias trashe='trash-empty'
+
+# GPG encryption
+alias gpg-check='gpg --keyserver-options auto-key-retrieve --verify'
+alias gpg-retrieve='gpg --keyserver-options auto-key-retrieve --receive-keys'
+
+# Git Aliases
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias stat='git status'
+alias tag='git tag'
+alias newtag='git tag -a'
+alias lg='lazygit'
+
+# Shell Aliases
+alias srcz='source ~/.zshrc'
+alias srcb='source ~/.bashrc'
+alias srca='source ~/.aliasrc'
+alias rebash='reset && bash'
+alias rezsh='reset && zsh'
+alias rs='reset'
+alias cl='clear'
+
+# Chmod Aliases
+alias mxp='chmod a+x'
+alias mxm='chmod a-x'
+alias 644='chmod -R 644'
+alias 666='chmod -R 666'
+alias 755='chmod -R 755'
+alias 777='chmod -R 777'
+
+# Switch Between Shells (User Shell)
+alias tobash="chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="chsh $USER -s /bin/zsh && echo 'Now log out.'"
+
+# APT To Nala
+apt() { 
+  command nala "$@"
+}
+sudo() {
+  if [ "$1" = "apt" ]; then
+    shift
+    command sudo nala "$@"
+  else
+    command sudo "$@"
+  fi
+}
+
+# Making APT Better
+alias suapt='sudo apt'
+alias aptin='sudo apt install'
+alias aptup='sudo apt update && sudo apt upgrade'
+alias aptud='sudo apt update'
+alias aptug='sudo apt upgrade'
+alias aptrm='sudo apt remove'
+alias aptpu='sudo apt purge'
+
+# Making DNF Better
+alias sudnf='sudo dnf'
+alias dnfin='sudo dnf install'
+alias dnfup='sudo dnf update && sudo apt upgrade'
+alias dnfud='sudo dnf update'
+alias dnfug='sudo dnf upgrade'
+alias dnfrm='sudo dnf remove'
+
+# Making Pacman & Yay Better
+alias pac='pacman'
+alias spac='sudo pacman'
+alias psyu='sudo pacman -Syu'
+alias pS='sudo pacman -S'
+alias psy='sudo pacman -Sy'
+alias pss='pacman -Ss'
+alias ysyu='yay -Syu'
+alias ysua='yay -Sua'
+alias ysy='yay -Sy'
+alias yss='yay -Ss'
+alias ys='yay -S'
+alias unlock='sudo rm /var/lib/pacman/db.lck'
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias pacsk='pacseek'
+
+# Get Fastest Mirrors
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
