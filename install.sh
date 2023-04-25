@@ -6,14 +6,6 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-# Moving dnf.conf
-#mv /etc/dnf/dnf.conf /etc/dnf/dnf.conf.bak
-#mv dnf.conf /etc/dnf/dnf.conf
-
-# Moving pacman.conf
-#mv /etc/pacman.conf /etc/pacman.conf.bak
-#mv pacman.conf /etc/pacman.conf
-
 # Moving sources.list
 mv /etc/aptsources.list /etc/apt/sources.list.bak
 mv sources.list /etc/apt/sources.list
@@ -103,7 +95,6 @@ nala install mesa-utils -y
 # Installing SDDM & Theme
 nala install sddm -y
 systemctl set-default graphical.target
-#systemctl disabble gdm.service
 systemctl enable sddm.service
 mkdir -p /usr/share/sddm/themes
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
