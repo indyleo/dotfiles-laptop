@@ -1,5 +1,5 @@
 # My Dotfiles
-Distro I Use Is Debian SID With AwesomWM
+Distro I Use Is Pop-os With AwesomWM
 
 # Why Is Their Rando Configs
 The reason why the "sddm.conf, pacman.conf, dnf.conf, and sorces.list" is still their because its just allows me to more easily switch to a diffrent distro i want or need to

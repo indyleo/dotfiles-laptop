@@ -98,18 +98,17 @@ nala install sxhkd xcowsay arandr xterm xclip xbacklight -y
 # Installing glxgears
 nala install mesa-utils -y
 
+# Script Variables
+username=$(id -u -n 1000)
+builddir=$(pwd)
+
 # Installing SDDM & Theme
 nala install sddm -y
 systemctl set-default graphical.target
-# systemctl disabble gdm.service
 systemctl enable sddm.service
 mkdir -p /usr/share/sddm/themes
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv $builddir/sddm.conf /etc/sddm.conf
-
-# Script Variables
-username=$(id -u -n 1000)
-builddir=$(pwd)
 
 # Installing fonts 
 nala install fonts-font-awesome fontconfig -y
