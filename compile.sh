@@ -20,12 +20,24 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 cd ~
 
+# Enveycontrol
+cd ~/Github
+git clone https://github.com/bayasdev/envycontrol.git
+cd envycontrol
+sudo pip install .
+cd ~
+
 # Shell Color Scripts
 cd ~/Github
 git clone https://gitlab.com/dwt1/shell-color-scripts.git
 cd shell-color-scripts
 sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
+cd ~
+
+# Greenclip
+cd ~/.local/bin
+wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
 cd ~
 
 # Pynvim
@@ -54,7 +66,7 @@ cd ~
 # Moving And Deletig And Adding Files
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv  sxhkd polybar neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
+mv  sxhkd polybar neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm ~/.bashrc ~/.profile
 mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile ~/
 
