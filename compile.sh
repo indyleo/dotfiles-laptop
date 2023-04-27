@@ -20,13 +20,6 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 cd ~
 
-# Enveycontrol
-cd ~/Github
-git clone https://github.com/bayasdev/envycontrol.git
-cd envycontrol
-sudo pip install .
-cd ~
-
 # Shell Color Scripts
 cd ~/Github
 git clone https://gitlab.com/dwt1/shell-color-scripts.git
