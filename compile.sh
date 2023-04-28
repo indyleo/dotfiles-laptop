@@ -28,11 +28,6 @@ sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
 cd ~
 
-# Greenclip
-cd ~/.local/bin
-wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
-cd ~
-
 # Pynvim
 pip install pynvim
 
@@ -88,6 +83,7 @@ cd ~/Github
 git clone https://github.com/alvatip/Nordzy-cursors.git
 cd Nordzy-cursors
 ./install.sh
+cd ~
 
 # Papirus Icon Theme
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
@@ -101,6 +97,11 @@ cd ~/Github
 git clone https://github.com/jluttine/rofi-power-menu.git
 cd rofi-power-menu
 cp rofi-power-menu ~/.local/bin/
+cd ~
+
+# Greenclip
+cd ~/.local/bin
+wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
 cd ~
 
 # Nitch
