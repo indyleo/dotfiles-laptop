@@ -7,19 +7,6 @@ builddir=$(pwd)
 mkdir -p ~/Github ~/Img ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
-# Headsetcontrol
-cd ~/Github
-git clone https://github.com/Sapd/HeadsetControl
-cd HeadsetControl
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-cd ~
-
 # Shell Color Scripts
 cd ~/Github
 git clone https://gitlab.com/dwt1/shell-color-scripts.git
@@ -59,7 +46,7 @@ cd ~
 # Moving And Deletig And Adding Files
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv  sxhkd polybar neofetch nvim ranger picom awesome conky kitty alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
+mv  sxhkd polybar neofetch nvim ranger picom awesome alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm ~/.bashrc ~/.profile ~/.zshenv
 mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile ~/
 
@@ -106,6 +93,7 @@ cd ~
 # Greenclip
 cd ~/.local/bin
 wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
+chmod a+x greenclip 
 cd ~
 
 # Nix pkg manager 

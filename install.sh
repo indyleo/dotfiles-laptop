@@ -58,7 +58,7 @@ nala install gnupg ca-certificates gcc-multilib g++-multilib cmake libssl-dev  \
   libxcursor-dev -y
 
 # Installing GUI programs 
-nala install polybar galculator rpi-imager kitty alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
+nala install polybar galculator rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
 
 # Installing a music player
 nala install rhythmbox rhythmbox-plugins -y
@@ -76,7 +76,7 @@ nala install qt5ct qt5-style-plugins lxappearance -y
 nala install gvfs thunar-archive-plugin thunar file-roller -y
 
 # Installing Awesome
-nala install conky awesome picom flameshot lxpolkit rofi i3lock-fancy -y
+nala install awesome picom flameshot lxpolkit rofi i3lock-fancy -y
 
 # Installing Wallpaper Setters
 nala install xwallpaper nitrogen feh -y 
