@@ -101,12 +101,12 @@ username=$(id -u -n 1000)
 builddir=$(pwd)
 
 # Installing SDDM & Theme
-nala install sddm -y
-systemctl set-default graphical.target
-systemctl enable sddm.service
-mkdir -p /usr/share/sddm/themes
-tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
-mv $builddir/sddm.conf /etc/sddm.conf
+# nala install sddm -y
+# systemctl set-default graphical.target
+# systemctl enable sddm.service
+# mkdir -p /usr/share/sddm/themes
+# tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
+# mv $builddir/sddm.conf /etc/sddm.conf
 
 # Installing fonts 
 nala install fonts-font-awesome fontconfig -y
