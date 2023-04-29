@@ -28,6 +28,11 @@ sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
 cd ~
 
+# Installing moar pager
+wget https://github.com/walles/moar/releases/download/v1.13.0/moar-v1.13.0-linux-386 
+chmod a+x moar-*-*-*
+mv moar-*-*-* ~/.local/bin/moar 
+
 # Pynvim
 pip install pynvim
 
@@ -83,7 +88,6 @@ cd ~/Github
 git clone https://github.com/alvatip/Nordzy-cursors.git
 cd Nordzy-cursors
 ./install.sh
-cd ~
 
 # Papirus Icon Theme
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
