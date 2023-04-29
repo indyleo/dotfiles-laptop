@@ -15,8 +15,8 @@ fi
 #mv pacman.conf /etc/pacman.conf
 
 # Moving sources.list
-#mv /etc/aptsources.list /etc/apt/sources.list.bak
-#mv sources.list /etc/apt/sources.list
+mv /etc/aptsources.list /etc/apt/sources.list.bak
+mv sources.list /etc/apt/sources.list
 
 # Updating system
 apt update -y
