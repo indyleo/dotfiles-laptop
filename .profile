@@ -52,7 +52,6 @@ export LESSHISTFILE=-
 # Rustup
 . "$HOME/.cargo/env"
 
-# Startx
 if [[ "$(tty)" = "/dev/tty1" ]]; then
-	pgrep awesome || startx "$HOME/.xsession"
+	pgrep awesome || startx
 fi
