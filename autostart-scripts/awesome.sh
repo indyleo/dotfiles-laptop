@@ -2,17 +2,17 @@
 
 # Killing Of Programs
 killall -q picom & 
+killall -q mpd & 
 killall -q sxhkd &
-killall -q conky &
 killall -q solaar &
 killall -q greenclip &
 
 # Starting Programs
-sleep 1 && picom --experimental-backends &
+sleep 1 && picom &
 lxpolkit &
 sxhkd &
+mpd &
 greenclip daemon &
-sleep 3 && conky -c ~/.config/conky/awesome/conky-01.conkyrc &
 solaar -w hide &
 
 # Wallpapers
