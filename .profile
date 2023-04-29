@@ -49,6 +49,9 @@ export IMAGE="sxiv"
 # Disable files
 export LESSHISTFILE=-
 
+# Gh Completions
+eval "$(gh completion -s bash)"
+
 # Rustup
 . "$HOME/.cargo/env"
 
