@@ -2,7 +2,6 @@
 
 # Killing Of Programs
 killall -q picom & 
-killall -q mpd & 
 killall -q sxhkd &
 killall -q solaar &
 killall -q greenclip &
@@ -11,7 +10,6 @@ killall -q greenclip &
 sleep 1 && picom &
 lxpolkit &
 sxhkd &
-mpd &
 greenclip daemon &
 solaar -w hide &
 
