@@ -10,7 +10,7 @@ killall -q greenclip &
 sleep 1 && picom &
 lxpolkit &
 sxhkd &
-greenclip daemon &
+sleep 1 && greenclip daemon &
 solaar -w hide &
 
 # Wallpapers
