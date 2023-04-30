@@ -7,12 +7,6 @@ The reason why the "sddm.conf, pacman.conf, dnf.conf, and sorces.list" is still 
 # Preview : 
 ![2023-04-27_23-23](https://user-images.githubusercontent.com/100316787/235046943-977f3a49-f7bd-4ea2-ac33-083dc09080bf.png)
 
-# Awesome loading ~/.xsession
-In /usr/share/xsessions/awesome.desktop change the exec line to
-```
-Exec=/etc/X11/Xsession
-```
-
 # Qt And GTK Themes
 ```
 QT_QPA_PLATFORMTHEME=qt5ct 
