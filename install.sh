@@ -67,7 +67,7 @@ nala install polybar galculator rpi-imager alacritty bleachbit timeshift transmi
 nala install rhythmbox rhythmbox-plugins rhythmbox-data -y
 
 # Installing media stuff
-nala install playerctl pavucontrol yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
+nala install playerctl pavucontrol yt-dlp mpv peek vlc -y
 
 # Installing image viewer
 nala install sxiv -y
