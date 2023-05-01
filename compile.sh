@@ -4,7 +4,7 @@
 builddir=$(pwd)
 
 # Making directories & files 
-mkdir -p ~/Github ~/Img ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
+mkdir -p ~/Github ~/Img ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos ~/.config
 touch ~/.cache/zsh/history 
 
 # Shell Color Scripts
@@ -45,7 +45,7 @@ cd ~
 # Moving And Deletig And Adding Files
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv  sxhkd polybar neofetch nvim ranger picom awesome alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
+mv sxhkd polybar neofetch nvim ranger picom awesome alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm ~/.bashrc ~/.profile ~/.zshenv
 mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile ~/
 
