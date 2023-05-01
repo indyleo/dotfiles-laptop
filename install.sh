@@ -34,7 +34,7 @@ nala install direnv blueman bluez-tools yad fzf locate gh tree xsel build-essent
 nala install ripgrep fd-find neovim nano vim -y
 
 # Installing other pkg managers
-nala install python-pip npm flatpak golang-go -y
+nala install python3-pip npm flatpak golang -y
 
 # XDG portals
 nala install xdg-user-dirs xdg-user-dirs-gtk -y
