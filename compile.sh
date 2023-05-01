@@ -26,13 +26,6 @@ go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# Installing bob-nvim
-cargo install bob-nvim
-
-# Installing & Using Bobs Neovim
-bob install 0.8.3
-bob use 0.8.3
-
 # Moving And Deletig And Adding Files
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
