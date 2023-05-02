@@ -14,8 +14,8 @@ configuration {
 @theme "nord"
 
 listview {
-	lines: 6;
-	columns: 2;
+	lines: 3;
+	columns: 4;
 }
 
 window {
