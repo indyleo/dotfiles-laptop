@@ -1,4 +1,5 @@
-configuration {
+configuration { 
+    show-icons: true; 
     font: "FiraCode Nerd Font 12";
     line-margin: 10;
     modi: "window,drun,run,combi";
@@ -8,17 +9,5 @@ configuration {
     display-drun:   "";
     display-window: "";
     display-combi:  "";
-    show-icons:     true;
 }
-
 @theme "nord"
-
-listview {
-	lines: 3;
-	columns: 4;
-}
-
-window {
-	width: 30%;
-}
-
