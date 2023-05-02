@@ -1,4 +1,3 @@
--- My Rofi Config
 configuration {
     font: "FiraCode Nerd Font 12";
     line-margin: 10;
