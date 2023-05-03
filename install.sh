@@ -28,7 +28,7 @@ apt install nala -y
 # Installing CLI programs
 nala install direnv blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev \
   gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks \
-  ranger shellcheck python3-venv stow apt-transport-https lsd -y
+  ranger shellcheck python3-venv stow apt-transport-https lsd qalc libtool libtool-bin -y
 
 # Text Editor Stuff
 nala install ripgrep fd-find neovim nano vim -y
@@ -94,7 +94,7 @@ nala install zathura -y
 nala install firefox -y
 
 # Installing X11 stuff
-nala install xinit sxhkd xcowsay arandr xterm xclip xbacklight -y
+nala install xinit sxhkd xcowsay arandr xterm xclip xbacklight rofi-dev -y
 
 # Installing glxgears
 nala install mesa-utils -y
