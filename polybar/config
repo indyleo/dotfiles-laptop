@@ -28,7 +28,7 @@ separator = |
 
 ; Shape Of The Bar
 width = 100%
-height = 27
+height = 25
 radius = 0.0
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -40,9 +40,9 @@ module-margin-left = 2
 module-margin-right = 2
 
 ; Fonts
-font-0 = "Ubuntu:weight=SemiBold:size=10;2"
-font-1 = "Ubuntu:weight=Medium:size=10;2"
-font-2 = "Symbols Nerd Font:size=12;2"
+font-0 = "Ubuntu:weight=SemiBold:size=8;2"
+font-1 = "Ubuntu:weight=Medium:size=8;2"
+font-2 = "Symbols Nerd Font:size=10;2"
 
 ; Modules
 modules-left = term xwindow 
