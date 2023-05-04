@@ -7,7 +7,6 @@ killall -q greenclip &
 # Starting Programs
 picom &
 lxpolkit &
-sxhkd &
 sleep 1 && greenclip daemon &
 solaar -w hide &
 
