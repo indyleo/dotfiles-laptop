@@ -47,7 +47,7 @@ font-2 = "Symbols Nerd Font:size=10;2"
 ; Modules
 modules-left = logo xwindow 
 modules-center = workspaces 
-modules-right = wallpaper battery wlan audio clip logi shot date
+modules-right = wallpaper battery wlan audio clip shot date
 
 ; For Vim Users
 # vim:ft=dosini
