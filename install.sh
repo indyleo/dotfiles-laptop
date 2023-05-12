@@ -89,7 +89,7 @@ echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
 nala install polybar galculator rpi-imager kitty bleachbit timeshift \
-  transmission-gtk dconf-editor solaar virt-manager xinit sxhkd xcowsay \
+  transmission-gtk dconf-editor virt-manager xinit sxhkd xcowsay \
   arandr xterm xclip rofi-dev xbacklight xsel xdotool  -y
 
 echo "############################"
