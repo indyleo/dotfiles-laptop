@@ -11,6 +11,11 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+# HeadsetControl Aliases
+alias h1='headsetcontrol -l 0'
+alias hb='headsetcontrol -b'
+alias hc='headsetcontrol'
+
 # PS Aliases
 alias psa="ps auxf"
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
@@ -31,13 +36,7 @@ alias rn='ranger'
 alias src='source'
 alias df='df -h'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Wallpaper Aliases
 alias wal='find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch'
-alias fehr='~/.fehbg'
-alias fehw='feh --randomize --bg-fill ~/Pictures/Wallpapers/'
-alias nitr='nitrogen --restore'
-alias nran='nitrogen --random ~/Pictures/Wallpapers/'
 
 # Get Error Messages From Journalctl
 alias jctl='journalctl -p 3 -xb'
@@ -53,10 +52,8 @@ alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
 alias yta-wav='yt-dlp --extract-audio --audio-format wav '
 alias ytv-best='yt-dlp -f bestvideo+bestaudio '
 
-# Load Xresources
+# Xresources
 alias load='xrdb -load ~/.Xresources'
-
-# Merge Xresources
 alias merge='xrdb -merge ~/.Xresources'
 
 # Easier Navigation
@@ -136,7 +133,9 @@ alias playmp4='vlc *.mp4'
 
 # Neovim Aliases
 alias vim='nvim'
+alias vide='neovide'
 alias svim='sudo nvim'
+alias svide='sudo ~/.cargo/bin/neovide'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
@@ -212,6 +211,11 @@ alias carcl='cargo clean'
 alias pipin='pip install'
 alias pipun='pip uninstall'
 alias pipdo='pip download'
+
+# Go Aliases
+alias gin='go install'
+alias gge='go get'
+alias gli='go list'
 
 # Flatpak Aliases
 alias flatin='flatpak install'
