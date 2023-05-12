@@ -102,14 +102,13 @@ echo "## Installing GUI Programs ##"
 echo "#############################"
 nala install polybar galculator rpi-imager kitty bleachbit timeshift \
   transmission-gtk dconf-editor solaar virt-manager xinit sxhkd xcowsay \
-  arandr xterm xclip rofi-dev xbacklight xsel xdotool -y
+  arandr xterm xclip rofi-dev xbacklight xsel xdotool  -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
 echo "############################"
 nala install rhythmbox rhythmbox-plugins rhythmbox-data \
-  playerctl pavucontrol yt-dlp mpv peek obs-studio kdenlive \
-  audacity gimp inkscape vlc sxiv -y
+  playerctl pavucontrol yt-dlp mpv peek vlc sxiv -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
@@ -121,15 +120,15 @@ echo "## Installing File Stuff ##"
 echo "###########################"
 nala install gvfs thunar-archive-plugin thunar file-roller -y
 
-echo "###################################"
-echo "## Installing Things For Awesome ##"
-echo "###################################"
-nala install awesome picom flameshot lxpolkit rofi i3lock-fancy -y
+echo "##################################"
+echo "## Installing Things For Any WM ##"
+echo "##################################"
+nala install xwallpaper picom flameshot lxpolkit rofi i3lock-fancy -y
 
-echo "###################################"
-echo "## Installing A Wallpaper Setter ##"
-echo "###################################"
-nala install xwallpaper -y 
+echo "################################"
+echo "## Installing Window Managers ##"
+echo "################################"
+nala install awesome -y 
 
 echo "#############################"
 echo "## Installing Office Stuff ##"
@@ -140,7 +139,6 @@ echo "########################"
 echo "## Installing FireFox ##"
 echo "########################"
 nala install firefox -y
-
 
 echo "########################"
 echo "## Installing Drivers ##"
@@ -201,7 +199,7 @@ echo "## Pfetch & NerdFetch ##"
 echo "########################"
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
-chmod -v a+x nerdfetch pfetch
+chmod a+x nerdfetch pfetch
 mv -v nerdfetch pfetch /usr/bin/
 
 echo "#####################"
