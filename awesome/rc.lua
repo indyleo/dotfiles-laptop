@@ -27,7 +27,7 @@ local lain = require("lain")
 local freedesktop = require("freedesktop")
 
 -- Error handling
--- Check if awesome encountered an error during startup and fell back to
+-- Check if awesome encountered an error during stafnaf reacts to songsrtup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
@@ -97,7 +97,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
      set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "WWW", "MSG", "MUS", "GAME", "DEV", "VIRT", "DOC", "SYS", "REC", }, s, awful.layout.layouts[1])
+    awful.tag({ "WWW", "MUS", "DEV", "DOC", "SYS", }, s, awful.layout.layouts[1])
 end)
 
 -- Mouse bindings
