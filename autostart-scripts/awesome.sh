@@ -14,4 +14,4 @@ solaar -w hide &
 
 # Wallpaper
 # find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch &
-xwallpaper --stretch 3xsraffkwi1a1.png &
+xwallpaper --stretch ~/Pictures/Wallpapers/3xsraffkwi1a1.png &
