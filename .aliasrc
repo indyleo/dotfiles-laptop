@@ -128,15 +128,13 @@ alias playogg='rythmbox *.ogg'
 alias playmp3='rythmbox *.mp3'
 
 # Video Aliases
-alias playavi='vlc *.avi'
-alias playmov='vlc *.mov'
-alias playmp4='vlc *.mp4'
+alias playavi='mpv *.avi'
+alias playmov='mpv *.mov'
+alias playmp4='mpv *.mp4'
 
 # Neovim Aliases
 alias vim='nvim'
-alias vide='neovide'
 alias svim='sudo nvim'
-alias svide='sudo ~/.cargo/bin/neovide'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'

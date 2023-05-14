@@ -88,15 +88,15 @@ nala install gnupg ca-certificates gcc-multilib g++-multilib cmake libssl-dev  \
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
-nala install polybar galculator rpi-imager kitty bleachbit timeshift \
-  transmission-gtk dconf-editor virt-manager xinit sxhkd xcowsay \
-  arandr xterm xclip rofi-dev xbacklight xsel xdotool  -y
+nala install polybar galculator kitty bleachbit timeshift \
+  transmission-gtk dconf-editor xinit sxhkd arandr xterm \
+  xclip rofi-dev xbacklight xsel xdotool -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
 echo "############################"
 nala install rhythmbox rhythmbox-plugins rhythmbox-data \
-  playerctl pavucontrol yt-dlp mpv peek vlc sxiv -y
+  playerctl pavucontrol yt-dlp mpv peek sxiv -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
