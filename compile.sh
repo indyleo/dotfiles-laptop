@@ -45,7 +45,7 @@ mkdir build
 cd build/
 ../configure
 make
-sudo make install
+make install
 cd ~
 
 echo "################"
