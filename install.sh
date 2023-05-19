@@ -28,14 +28,14 @@ echo "## CLI Nice To Haves ##"
 echo "#######################"
 nala install direnv yad fzf locate gh tree \
   build-essential git cmake libhidapi-dev gpg openssl tldr \
-  trash-cli g++ gcc wget curl python3  unzip tar \
+  trash-cli g++ gcc wget curl python3 unzip tar \
   python3-setuptools autojump luarocks ranger shellcheck python3-venv \
   stow apt-transport-https qalc cmdtest lsd qalc libtool libtool-bin -y
 
-echo "######################"
-echo "## Bluetooth & Wifi ##"
-echo "######################"
-nala install blueman bluez-tools network-manager -y
+echo "##################"
+echo "## Wifi Manager ##"
+echo "##################"
+nala install network-manager -y
 
 echo "##################"
 echo "## Text Editors ##"
