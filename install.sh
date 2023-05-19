@@ -76,7 +76,7 @@ echo "## Installing GUI Programs ##"
 echo "#############################"
 nala install polybar galculator kitty bleachbit timeshift \
   transmission-gtk dconf-editor xinit sxhkd arandr xterm \
-  xclip rofi-dev xbacklight xsel xdotool -y
+  xclip rofi-dev xbacklight xsel xdotool screenkey -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
