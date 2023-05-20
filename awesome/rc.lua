@@ -78,6 +78,7 @@ end)
 root.buttons(gears.table.join())
 
 -- Key bindings
+globalkeys = gears.table.join(
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
@@ -324,5 +325,5 @@ beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
 
 -- Startup Stuff 
-awful.spawn.with_shell("~/.config/autostart-scripts/awesome.sh")
+awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 awful.spawn.with_shell("~/.config/polybar/polybar-startup-scripts/awesome-polybar.sh")
