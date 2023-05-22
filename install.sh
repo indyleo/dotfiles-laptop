@@ -9,7 +9,7 @@ fi
 echo "#########################"
 echo "## Updating The System ##"
 echo "#########################"
-apt update -y
+apt update
 apt upgrade -y
 
 echo "#####################"
@@ -22,8 +22,8 @@ echo "## CLI Nice To Haves ##"
 echo "#######################"
 nala install direnv yad fzf locate gh tree \
   build-essential git cmake make libhidapi-dev gpg openssl tldr \
-  trash-cli g++ gcc wget curl python3 unzip tar \
-  python3-setuptools autojump luarocks ranger shellcheck python3-venv \
+  trash-cli g++ gcc wget curl python3 unzip tar python3-setuptools \
+  autojump luarocks ranger shellcheck python3-venv \
   stow apt-transport-https qalc cmdtest qalc libtool -y
 
 echo "##################"
@@ -39,7 +39,7 @@ nala install ripgrep fd-find neovim -y
 echo "##################"
 echo "## Pkg Managers ##"
 echo "##################"
-nala install npm flatpak golang-go -y
+nala install npm flatpak golang-go python3-pip -y
 
 echo "###############"
 echo "## XDG Stuff ##"
@@ -49,7 +49,7 @@ nala install xdg-user-dirs xdg-user-dirs-gtk -y
 echo "###############"
 echo "## Fun Stuff ##"
 echo "###############"
-nala install neofetch cowsay cmatrix tty-clock -y
+nala install neofetch cowsay cmatrix tty-clock lolcat -y
 
 echo "###############"
 echo "## USB Utils ##"
@@ -112,9 +112,10 @@ nala install libreoffice zathura -y
 echo "##########################"
 echo "## Installing A Browser ##"
 echo "##########################"
+nala purge firefox -y
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
-nala update -y
+nala update
 nala install brave-browser -y
 
 echo "########################"
@@ -158,9 +159,9 @@ echo "## Removing Zip Files From Fonts ##"
 echo "###################################"
 rm -v ./FiraCode.zip ./Ubuntu.zip ./UbuntuMono.zip ./CascadiaCode.zip ./NerdFontsSymbolsOnly.zip
 
-echo "###############################"
-echo "## Installing UFW (Firewall) ##"
-echo "###############################"
+echo "####################"
+echo "## Installing UFW ##"
+echo "####################"
 nala install ufw -y
 sleep 2.5
 ufw limit 22/tcp
@@ -171,13 +172,12 @@ ufw default allow outgoing
 ufw enable
 systemctl enable ufw
 
-echo "########################"
-echo "## Pfetch & NerdFetch ##"
-echo "########################"
+echo "#############"
+echo "## Pfetch  ##"
+echo "#############"
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
-wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
-chmod a+x nerdfetch pfetch
-mv -v nerdfetch pfetch /usr/bin/
+chmod a+x pfetch
+mv -v pfetch /usr/bin/
 
 echo "#####################"
 echo "## Starship Prompt ##"

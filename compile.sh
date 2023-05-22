@@ -45,7 +45,7 @@ mkdir build
 cd build/
 ../configure
 make
-make install
+sudo make install
 cd ~
 
 echo "################"
@@ -78,7 +78,7 @@ echo "########################################"
 mkdir -v ~/.config
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv -v xfce4 autostart-scripts sxhkd polybar Thunar neofetch nvim ranger picom awesome conky kitty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
+mv -v sxhkd polybar neofetch nvim ranger picom awesome conky kitty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv
 mv -v .bashrc .zshrc .zshenv .aliasrc .xsession .profile .xinitrc .Xresources ~/
 mv -v $builddir/scripts/* ~/.local/bin/
