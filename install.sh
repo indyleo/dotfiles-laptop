@@ -6,6 +6,12 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
+echo "##############################"
+echo "## Making 'dnf.conf' Better ##"
+echo "##############################"
+rm -v /etc/dnf/dnf.conf
+mv -v dnf.conf /etc/dnf/dnf.conf
+
 echo "#########################"
 echo "## Updating The System ##"
 echo "#########################"
