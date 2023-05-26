@@ -70,19 +70,7 @@ mv -v moar-*-*-* ~/.local/bin/moar
 echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
-go install github.com/charmbracelet/glow@latest github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
-
-echo "##################"
-echo "## Rust Install ##"
-echo "##################" 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-echo "##################"
-echo "## Neovim Setup ##"
-echo "##################"
-~/.cargo/bin/cargo install bob-nvim lsd
-~/.cargo/bin/bob install stable
-~/.cargo/bin/bob use stable
+go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
 echo "########################################"
 echo "## Moving, Deleting, And Adding Files ##"
@@ -131,14 +119,6 @@ cd ~/.local/bin
 wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
 chmod a+x greenclip 
 cd ~
-
-echo "###########"
-echo "## Nitch ##"
-echo "###########"
-wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
-chmod a+x setup.sh
-./setup.sh
-rm setup.sh
 
 echo "##################"
 echo "## Flatpak Repo ##"
