@@ -60,6 +60,11 @@ ninja -C build
 sudo ninja -C build install
 cd ~
 
+echo "#######################"
+echo "## Disabling SELinux ##"
+echo "#######################"
+sudo grubby --update-kernel ALL --remove-args selinux
+
 echo "################"
 echo "## Moar Pager ##"
 echo "################" 
@@ -75,17 +80,17 @@ go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4
 echo "###########################"
 echo "## Installing Nerd Fonts ##"
 echo "###########################"
-mkdir -pv /home/$username/.fonts
+mkdir -pv ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
-unzip -n FiraCode.zip -d /home/$username/.fonts
+unzip -n FiraCode.zip -d ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
-unzip -n Ubuntu.zip -d /home/$username/.fonts
+unzip -n Ubuntu.zip -d ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
-unzip -n UbuntuMono.zip -d /home/$username/.fonts
+unzip -n UbuntuMono.zip -d ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
-unzip -n CascadiaCode.zip -d /home/$username/.fonts
+unzip -n CascadiaCode.zip -d ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
-unzip -n NerdFontsSymbolsOnly.zip -d /home/$username/.fonts
+unzip -n NerdFontsSymbolsOnly.zip -d ~/.fonts
 
 echo "##########################"
 echo "## Reloading Font Cache ##"
