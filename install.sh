@@ -31,8 +31,8 @@ echo "#######################"
 dnf install direnv yad fzf locate gh tree build-essential git \
   cmake make hidapi-devel gpg openssl tldr dnf-plugins-core lsd \
   trash-cli g++ gcc wget curl python3 unzip tar python3-setuptools \
-  autojump luarocks ranger shellcheck python3-venv meson \
-  stow apt-transport-https qalculate cmdtest libtool ninja-build -y
+  autojump autojump-zsh luarocks ranger shellcheck python3-venv meson stow \
+  qalculate cmdtest libtool ninja-build -y
 
 echo "##################"
 echo "## Wifi Manager ##"
