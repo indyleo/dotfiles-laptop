@@ -29,11 +29,10 @@ echo "#######################"
 echo "## CLI Nice To Haves ##"
 echo "#######################"
 dnf install direnv yad fzf locate gh tree build-essential git \
-  cmake make hidapi-devel gpg openssl tldr \
+  cmake make hidapi-devel gpg openssl tldr dnf-plugins-core lsd \
   trash-cli g++ gcc wget curl python3 unzip tar python3-setuptools \
   autojump luarocks ranger shellcheck python3-venv meson \
-  stow apt-transport-https qalculate cmdtest libtool ninja-build \
-  dnf-plugins-core lsd -y
+  stow apt-transport-https qalculate cmdtest libtool ninja-build -y
 
 echo "##################"
 echo "## Wifi Manager ##"
@@ -105,12 +104,13 @@ dnf install gvfs thunar-archive-plugin thunar file-roller -y
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
+dnf copr enable linuxredneck/xwallpaper
 dnf install xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
 
 echo "#################################"
 echo "## Installing Things For Picom ##"
 echo "#################################"
-dnf install dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel \
+dnf install dbus-devel libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel \
   libxcb-devel libGL-devel libEGL-devel pcre2-devel pixman-devel uthash-devel xcb-util-image-devel \
   xcb-util-renderutil-devel xorg-x11-proto-devel -y
 
@@ -127,6 +127,7 @@ dnf install libreoffice zathura -y
 echo "##########################"
 echo "## Installing A Browser ##"
 echo "##########################"
+dnf remove firefox -y
 dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 dnf install brave-browser -y
