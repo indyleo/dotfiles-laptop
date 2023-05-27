@@ -29,16 +29,16 @@ echo "#######################"
 echo "## CLI Nice To Haves ##"
 echo "#######################"
 dnf install direnv yad fzf locate gh tree build-essential git \
-  cmake make libhidapi-dev gpg openssl tldr \
+  cmake make hidapi-devel gpg openssl tldr \
   trash-cli g++ gcc wget curl python3 unzip tar python3-setuptools \
   autojump luarocks ranger shellcheck python3-venv meson \
-  stow apt-transport-https qalc cmdtest qalc libtool ninja-build \
+  stow apt-transport-https qalculate cmdtest libtool ninja-build \
   dnf-plugins-core lsd -y
 
 echo "##################"
 echo "## Wifi Manager ##"
 echo "##################"
-dnf install network-manager -y
+dnf install NetworkManager -y
 
 echo "##################"
 echo "## Text Editors ##"
@@ -58,7 +58,7 @@ dnf install xdg-user-dirs xdg-user-dirs-gtk -y
 echo "###############"
 echo "## Fun Stuff ##"
 echo "###############"
-dnf install neofetch cowsay cmatrix tty-clock lolcat -y
+dnf install neofetch cowsay cmatrix lolcat -y
 
 echo "###############"
 echo "## USB Utils ##"
@@ -78,14 +78,14 @@ dnf install zsh zsh-syntax-highlighting bash-completion -y
 echo "#####################"
 echo "## Installing Java ##"
 echo "#####################"
-dnf install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
+dnf install java-11-openjdk java-17-openjdk java-1.8.0-openjdk -y
 
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
 dnf install polybar galculator kitty bleachbit timeshift \
-  transmission-gtk dconf-editor xinit sxhkd arandr xterm \
-  xclip rofi-dev xbacklight xsel xdotool screenkey -y
+  transmission-gtk dconf-editor xorg-x11-xinit sxhkd arandr xterm \
+  xclip xbacklight xsel xdotool screenkey -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
@@ -110,10 +110,9 @@ dnf install xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
 echo "#################################"
 echo "## Installing Things For Picom ##"
 echo "#################################"
-ndnf install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev \
-  libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev \
-  libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev \
-  libev-dev libx11-xcb-dev -y 
+dnf install dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel \
+  libxcb-devel libGL-devel libEGL-devel pcre2-devel pixman-devel uthash-devel xcb-util-image-devel \
+  xcb-util-renderutil-devel xorg-x11-proto-devel -y
 
 echo "################################"
 echo "## Installing Window Managers ##"
@@ -128,8 +127,6 @@ dnf install libreoffice zathura -y
 echo "##########################"
 echo "## Installing A Browser ##"
 echo "##########################"
-dnf remove firefox -y
-dnf install 
 dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 dnf install brave-browser -y
@@ -137,7 +134,7 @@ dnf install brave-browser -y
 echo "########################"
 echo "## Installing Drivers ##"
 echo "########################"
-nala install mesa-utils -y
+dnf install mesa-utils -y
 
 # Script Variables
 username=$(id -u -n 1000)
@@ -146,7 +143,10 @@ builddir=$(pwd)
 echo "######################"
 echo "## Installing Fonts ##"
 echo "######################"
-nala install fonts-font-awesome fontconfig fonts-noto -y
+dnf copr enable atim/ubuntu-fonts -y
+dnf install fontawesome-fonts fontconfig ubuntu-family-fonts -y
+dnf install google-noto-cjk-fonts google-noto-emoji-fonts google-noto-fonts-common google-noto-sans-cjk-fonts google-noto-sans-hk-fonts \
+  google-noto-serif-cjk-fonts google-noto-sans-cjk-vf-fonts google-noto-serif-cjk-vf-fonts-y
 
 echo "###########################"
 echo "## Installing Nerd Fonts ##"
@@ -178,7 +178,7 @@ rm -v ./FiraCode.zip ./Ubuntu.zip ./UbuntuMono.zip ./CascadiaCode.zip ./NerdFont
 echo "####################"
 echo "## Installing UFW ##"
 echo "####################"
-nala install ufw -y
+dnf install ufw -y
 sleep 2.5
 ufw limit 22/tcp
 ufw allow 80/tcp
