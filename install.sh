@@ -21,9 +21,9 @@ dnf upgrade -y
 echo "#######################"
 echo "## Adding RPM Fusion ##"
 echo "#######################"
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
   https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf groupupdate core
+dnf groupupdate core
 
 echo "#######################"
 echo "## CLI Nice To Haves ##"
@@ -148,33 +148,6 @@ dnf copr enable atim/ubuntu-fonts -y
 dnf install fontawesome-fonts fontconfig ubuntu-family-fonts -y
 dnf install google-noto-cjk-fonts google-noto-emoji-fonts google-noto-fonts-common google-noto-sans-cjk-fonts google-noto-sans-hk-fonts \
   google-noto-serif-cjk-fonts google-noto-sans-cjk-vf-fonts google-noto-serif-cjk-vf-fonts-y
-
-echo "###########################"
-echo "## Installing Nerd Fonts ##"
-echo "###########################"
-mkdir -pv /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
-unzip -n FiraCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
-unzip -n Ubuntu.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
-unzip -n UbuntuMono.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
-unzip -n CascadiaCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
-unzip -n NerdFontsSymbolsOnly.zip -d /home/$username/.fonts
-chown $username:$username /home/$username/.fonts/
-chown $username:$username /home/$username/.fonts/*
-
-echo "##########################"
-echo "## Reloading Font Cache ##"
-echo "##########################"
-fc-cache -vf
-
-echo "###################################"
-echo "## Removing Zip Files From Fonts ##"
-echo "###################################"
-rm -v ./FiraCode.zip ./Ubuntu.zip ./UbuntuMono.zip ./CascadiaCode.zip ./NerdFontsSymbolsOnly.zip
 
 echo "####################"
 echo "## Installing UFW ##"
