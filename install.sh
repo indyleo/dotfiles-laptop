@@ -67,7 +67,7 @@ dnf install udiskie udisks2 -y
 echo "######################"
 echo "## Resource Monitor ##"
 echo "######################"
-dnf install btop htop bashtop -y
+dnf install btop htop -y
 
 echo "############################"
 echo "## Installing Shell Stuff ##"
