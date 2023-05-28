@@ -15,10 +15,6 @@ if [ -d "$HOME/Applications" ] ;
   then PATH="$HOME/Applications:$PATH"
 fi
 
-if [ -d "$HOME/.local/share/bob/nvim-bin" ] ;
-  then PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
-fi
-
 # XDG Exports
 if [ -z "$XDG_CONFIG_HOME" ] ; then
     export XDG_CONFIG_HOME="$HOME/.config"
@@ -51,6 +47,3 @@ export LESSHISTFILE=-
 
 # Gh Completions
 eval "$(gh completion -s zsh)"
-
-# Rustup
-. "$HOME/.cargo/env"
