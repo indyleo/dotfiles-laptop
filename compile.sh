@@ -9,28 +9,6 @@ echo "########################################"
 mkdir -pv ~/Github ~/Img ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
-echo "####################"
-echo "## HeadsetControl ##"
-echo "####################"
-cd ~/Github
-git clone https://github.com/Sapd/HeadsetControl
-cd HeadsetControl
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-cd ~
-
-echo "#################"
-echo "## Envycontrol ##"
-echo "#################"
-cd ~/Github
-git clone https://github.com/bayasdev/envycontrol.git
-cd ~
-
 echo "#########################"
 echo "## Shell Color Scripts ##"
 echo "#########################" 
@@ -99,10 +77,10 @@ echo "## Rust Install ##"
 echo "##################" 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-echo "########################"
-echo "## Neovim Setup & Lsd ##"
-echo "########################" 
-~/.cargo/bin/cargo install bob-nvim lsd
+echo "##################"
+echo "## Neovim Setup ##"
+echo "##################" 
+~/.cargo/bin/cargo install bob-nvim
 ~/.cargo/bin/bob install stable
 ~/.cargo/bin/bob use stable
 
