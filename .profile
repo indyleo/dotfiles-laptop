@@ -49,6 +49,6 @@ export LESSHISTFILE=-
 eval "$(gh completion -s bash)"
 
 # Startx
-#if [[ "$(tty)" = "/dev/tty1" ]]; then
-#	pgrep awesome || startx
-#fi
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+	pgrep awesome || startx
+fi
