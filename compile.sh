@@ -9,44 +9,18 @@ echo "########################################"
 mkdir -pv ~/Github ~/Img ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
-echo "#########################"
-echo "## Shell Color Scripts ##"
-echo "#########################" 
+echo "#################################"
+echo "## Installing AUR Helper (YAY) ##"
+echo "#################################"
 cd ~/Github
-git clone https://gitlab.com/dwt1/shell-color-scripts.git
-cd shell-color-scripts
-sudo make install
-sudo cp completions/_colorscript /usr/share/zsh/site-functions
-cd ~
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
 
-echo "################"
-echo "## Rofi Emoji ##"
-echo "################" 
-cd ~/Github
-git clone https://github.com/Mange/rofi-emoji.git
-cd rofi-emoji
-autoreconf -i
-mkdir build
-cd build/
-../configure
-make
-sudo make install
-cd ~
-
-echo "###############"
-echo "## Rofi Calc ##"
-echo "###############" 
-cd ~/Github
-git clone https://github.com/svenstaro/rofi-calc.git
-cd rofi-calc
-mkdir m4
-autoreconf -i
-mkdir build
-cd build/
-../configure
-make
-sudo make install
-cd ~
+echo "#################################"
+echo "## Installing Some AUR Pakages ##"
+echo "#################################" 
+yay -S shell-color-scripts brave-bin moar rofi-greenclip gotop tty-clock --noconfirm
 
 echo "######################"
 echo "## Picom Animations ##"
@@ -59,23 +33,6 @@ meson setup --buildtype=release . build
 ninja -C build
 sudo ninja -C build install
 cd ~
-
-echo "#######################"
-echo "## Disabling SELinux ##"
-echo "#######################"
-sudo grubby --update-kernel ALL --remove-args selinux
-
-echo "################"
-echo "## Moar Pager ##"
-echo "################" 
-wget https://github.com/walles/moar/releases/download/v1.13.0/moar-v1.13.0-linux-386 
-chmod a+x moar-*-*-*
-mv -v moar-*-*-* ~/.local/bin/moar
-
-echo "#################"
-echo "## Go Programs ##"
-echo "#################" 
-go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
 echo "###########################"
 echo "## Installing Nerd Fonts ##"
@@ -119,8 +76,6 @@ echo "#################"
 cd ~/Zsh/Plugins
 git clone https://github.com/hlissner/zsh-autopair.git
 git clone https://github.com/MichaelAquilina/zsh-you-should-use.git
-git clone https://github.com/zsh-users/zsh-completions.git
-git clone https://github.com/zsh-users/zsh-history-substring-search.git
 cd ~
 
 echo "###################"
@@ -141,14 +96,6 @@ echo "## GTK Theme ##"
 echo "###############" 
 cd ~/.themes
 git clone https://github.com/EliverLara/Nordic.git
-
-echo "###############"
-echo "## Greenclip ##"
-echo "###############"
-cd ~/.local/bin
-wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
-chmod a+x greenclip 
-cd ~
 
 echo "##################"
 echo "## Flatpak Repo ##"

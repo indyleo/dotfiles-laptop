@@ -200,9 +200,7 @@ alias flatse='flatpak search'
 alias flatru='flatpak run'
 alias flatki='flatpak kill'
 
-# Making DNF Better
-alias dnfin='sudo dnf install'
-alias dnfup='sudo dnf update && sudo dnf upgrade'
-alias dnfud='sudo dnf update'
-alias dnfug='sudo dnf upgrade'
-alias dnfrm='sudo dnf remove'
+# Making Pacman Better
+
+
+# Making YAY Better

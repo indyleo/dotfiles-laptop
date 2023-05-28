@@ -1,7 +1,7 @@
 # My Dotfiles
-Distro I Use Is Fedora With AwesomWM
+I Use Arch BTW With AwesomWM 
 
-# Preview : 
+# Preview: 
 ![Preview-Image](https://user-images.githubusercontent.com/100316787/235046943-977f3a49-f7bd-4ea2-ac33-083dc09080bf.png)
 
 # Qt And GTK Themes
@@ -11,7 +11,7 @@ QT_QPA_PLATFORMTHEME=qt5ct
 ```
 
 # Wlan Interface
-To find your wlan interface for polybar do 'nmcli' and the interface tou are connected to is the one to use
+To find your wlan interface for polybar do 'nmcli' and the interface to are connected to is the one to use
 
 # Resources (Dotfiles)
 - [Titus-Awesome](https://github.com/ChrisTitusTech/titus-awesome) Hosted On Github
