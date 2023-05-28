@@ -32,7 +32,8 @@ dnf install direnv yad fzf locate gh tree build-essential git \
   cmake make hidapi-devel gpg openssl tldr dnf-plugins-core lsd \
   trash-cli g++ gcc wget curl python3 unzip tar python3-setuptools \
   autojump autojump-zsh luarocks ranger shellcheck python3-pylint-venv \
-  meson stow qalculate libtool ninja-build python3-pytest-venv -y
+  meson stow qalculate libtool ninja-build python3-pytest-venv \
+  autoconf automake -y
 
 echo "##################"
 echo "## Wifi Manager ##"
