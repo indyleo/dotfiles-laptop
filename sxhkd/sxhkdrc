@@ -35,7 +35,7 @@ super + c
 
 # Locking Computer
 super + shift + Escape
-  i3lock-fancy -g
+  i3lock
 
 # Gui File Manager
 super + f

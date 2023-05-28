@@ -111,7 +111,7 @@ echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
 dnf copr enable linuxredneck/xwallpaper -y
-dnf install xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
+dnf install xwallpaper flameshot lxpolkit rofi i3lock -y
 
 echo "#################################"
 echo "## Installing Things For Picom ##"
