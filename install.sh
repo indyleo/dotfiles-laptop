@@ -104,7 +104,7 @@ dnf install gvfs thunar-archive-plugin thunar file-roller -y
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
-dnf copr enable linuxredneck/xwallpaper
+dnf copr enable linuxredneck/xwallpaper -y
 dnf install xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
 
 echo "#################################"
