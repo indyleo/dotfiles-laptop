@@ -71,7 +71,7 @@ awful.layout.layouts = {
      set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "WWW", "MSG", "MUS", "GAME", "DEV", "VIRT", "DOC", "SYS", "REC", }, s, awful.layout.layouts[1])
+    awful.tag({ "WWW", "MSG", "MUS", "DEV", "DOC", "SYS", }, s, awful.layout.layouts[1])
 end)
 
 -- Mouse bindings
