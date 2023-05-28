@@ -83,8 +83,14 @@ echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
 dnf install polybar galculator kitty bleachbit timeshift \
-  transmission-gtk dconf-editor xorg-x11-xinit sxhkd arandr xterm \
+  transmission-gtk dconf-editor sxhkd arandr xterm \
   xclip xbacklight xsel xdotool screenkey -y
+
+echo "###############################"
+echo "## Installing Xorg-X11 Stuff ##"
+echo "###############################"
+dnf install xorg-x11-server-Xorg xorg-x11-xinit xorg-x11-xauth abrt-addon-xorg \
+  xorg-x11-resutils xorg-x11-drivers xorg-x11-font-utils xrandr -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
