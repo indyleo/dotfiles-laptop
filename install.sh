@@ -89,8 +89,7 @@ echo "############################"
 echo "## Installing Media Stuff ##"
 echo "############################"
 nala install rhythmbox rhythmbox-plugins rhythmbox-data \
-  playerctl pavucontrol yt-dlp mpv peek obs-studio kdenlive \
-  audacity gimp vlc sxiv -y
+  playerctl pavucontrol yt-dlp mpv peek vlc sxiv -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
