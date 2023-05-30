@@ -81,9 +81,8 @@ echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
 nala install polybar galculator kitty bleachbit timeshift \
-  transmission-gtk dconf-editor solaar virt-manager xinit sxhkd \
-  arandr xterm xclip rofi-dev xbacklight xsel xdotool screenkey \
-  rpi-imager steam:i386 -y
+  transmission-gtk dconf-editor virt-manager xinit sxhkd arandr \
+  xterm xclip rofi-dev xbacklight xsel xdotool screenkey rpi-imager -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
