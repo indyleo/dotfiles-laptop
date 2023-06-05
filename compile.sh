@@ -125,6 +125,7 @@ cd ~/Github
 git clone https://github.com/alvatip/Nordzy-cursors.git
 cd Nordzy-cursors
 ./install.sh
+cd ~
 
 echo "#################"
 echo "## Icons Theme ##"
@@ -136,6 +137,16 @@ echo "## GTK Theme ##"
 echo "###############" 
 cd ~/.themes
 git clone https://github.com/EliverLara/Nordic.git
+cd ~
+
+echo "#################"
+echo "## Gedit Theme ##"
+echo "#################"
+cd ~/Github
+git clone https://github.com/nordtheme/gedit.git
+cd gedit
+./install.sh
+cd ~
 
 echo "###############"
 echo "## Greenclip ##"
