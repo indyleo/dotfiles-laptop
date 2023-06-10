@@ -54,3 +54,8 @@ eval "$(gh completion -s bash)"
 
 # Rustup
 . "$HOME/.cargo/env"
+
+# Startx
+# if [[ "$(tty)" = "/dev/tty1" ]]; then
+# 	pgrep awesome || startx
+# fi

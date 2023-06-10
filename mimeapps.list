@@ -12,7 +12,7 @@ video/x-matroska=mpv.desktop
 audio/ogg=rhythmbox.desktop
 audio/mp3=rhythmbox.desktop
 audio/wav=rhythmbox.desktop
-
+application/zip=org.gnome.FileRoller.desktop
 
 [Added Associations]
 x-scheme-handler/magnet=transmission-gtk.desktop;
