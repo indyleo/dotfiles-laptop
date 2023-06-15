@@ -48,13 +48,6 @@ make
 sudo make install
 cd ~
 
-echo "################"
-echo "## Moar Pager ##"
-echo "################" 
-wget https://github.com/walles/moar/releases/download/v1.13.0/moar-v1.13.0-linux-386 
-chmod a+x moar-*-*-*
-mv -v moar-*-*-* ~/.local/bin/moar
-
 echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
