@@ -105,7 +105,7 @@ nala install pcmanfm file-roller -y
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
-nala install picom xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
+nala install picom xwallpaper flameshot lxpolkit rofi i3lock-fancy dunst -y
 
 echo "################################"
 echo "## Installing Window Managers ##"
