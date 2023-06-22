@@ -11,6 +11,10 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/.local/scripts" ] ;
+  then PATH="$HOME/.local/scripts:$PATH"
+fi
+
 if [ -d "$HOME/Applications" ] ;
   then PATH="$HOME/Applications:$PATH"
 fi
@@ -64,8 +68,3 @@ eval "$(gh completion -s bash)"
 
 # Rustup
 . "$HOME/.cargo/env"
-
-# Startx
-# if [[ "$(tty)" = "/dev/tty1" ]]; then
-# 	pgrep awesome || startx
-# fi
