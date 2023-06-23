@@ -107,9 +107,9 @@ echo "## Installing Things For Any WM ##"
 echo "##################################"
 nala install picom xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
 
-echo "################################"
-echo "## Installing Window Managers ##"
-echo "################################"
+echo "##########################"
+echo "## Installing AwesomeWM ##"
+echo "##########################"
 nala install awesome -y 
 
 echo "#############################"
