@@ -26,11 +26,9 @@ apt install nala -y
 echo "#######################"
 echo "## CLI Nice To Haves ##"
 echo "#######################"
-nala install direnv yad fzf locate gh tree build-essential git cmake \
-  make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl \
-  python3 unzip tar python3-setuptools autojump luarocks ranger \
-  shellcheck python3-venv meson lsd stow apt-transport-https qalc cmdtest \
-  qalc libtool libtool-bin ninja-build autoconf automake python3-pli bat -y
+nala install direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 unzip tar \
+  python3-setuptools autojump luarocks ranger shellcheck python3-venv meson lsd stow apt-transport-https qalc cmdtest qalc libtool libtool-bin ninja-build \
+  autoconf automake python3-pil bat -y
 
 echo "##################"
 echo "## Wifi Manager ##"
@@ -80,17 +78,13 @@ nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
-nala install polybar galculator kitty bleachbit timeshift \
-  transmission-gtk dconf-editor virt-manager xinit sxhkd arandr \
-  xterm xclip rofi-dev xbacklight xsel xdotool screenkey gedit \
-  gedit-plugins xorg -y
+nala install polybar galculator kitty bleachbit timeshift transmission-gtk dconf-editor virt-manager xinit sxhkd arandr xterm xclip rofi-dev xbacklight xsel \
+  xdotool screenkey gedit gedit-plugins xorg -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
 echo "############################"
-nala install rhythmbox rhythmbox-plugins rhythmbox-data \
-  playerctl pavucontrol pamixer yt-dlp mpv peek vlc sxiv \
-  pulsemixer -y
+nala install rhythmbox rhythmbox-plugins rhythmbox-data playerctl pavucontrol pamixer yt-dlp mpv peek vlc sxiv pulsemixer -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
@@ -100,7 +94,7 @@ nala install qt5ct qt5-style-plugins lxappearance -y
 echo "###########################"
 echo "## Installing File Stuff ##"
 echo "###########################"
-nala install pcmanfm file-roller -y
+nala install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-font-manager gvfs file-roller -y
 
 echo "##################################"
 echo "## Installing Things For Any WM ##"
@@ -121,15 +115,15 @@ echo "##########################"
 echo "## Installing A Browser ##"
 echo "##########################"
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" \
+  | tee /etc/apt/sources.list.d/brave-browser-release.list
 nala update
 nala install brave-browser -y
 
 echo "#####################"
 echo "## Installing SDDM ##"
 echo "#####################"
-nala install sddm libqt5svg5 qml-module-qtquick-controls \
-  qml-module-qtquick-controls2 -y
+nala install sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv sddm.conf /etc/sddm.conf
 systemctl enable sddm
