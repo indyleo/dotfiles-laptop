@@ -99,7 +99,7 @@ nala install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-font-m
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
-nala install picom xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
+nala install xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
 
 echo "##########################"
 echo "## Installing AwesomeWM ##"
