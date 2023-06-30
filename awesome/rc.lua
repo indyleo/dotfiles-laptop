@@ -61,7 +61,7 @@ local term_scratch = bling.module.scratchpad {
     sticky = true,
     autoclose = true,
     floating = true,
-    geometry = {x=450, y=150, height=700, width=1000},
+    geometry = {x=300, y=100, height=500, width=800},
     reapply = true,
     dont_focus_before_close  = false
 }
@@ -72,7 +72,7 @@ local ranger_scratch = bling.module.scratchpad {
     sticky = true,
     autoclose = true,
     floating = true,
-    geometry = {x=450, y=150, height=700, width=1000},
+    geometry = {x=300, y=100, height=500, width=800},
     reapply = true,
     dont_focus_before_close  = false
 }
@@ -83,7 +83,7 @@ local mixer_scratch = bling.module.scratchpad {
     sticky = true,
     autoclose = true,
     floating = true,
-    geometry = {x=450, y=150, height=700, width=1000},
+    geometry = {x=300, y=100, height=500, width=800},
     reapply = true,
     dont_focus_before_close  = false
 }
@@ -94,7 +94,7 @@ local wiki_scratch = bling.module.scratchpad {
     sticky = true,
     autoclose = true,
     floating = true,
-    geometry = {x=450, y=150, height=700, width=1000},
+    geometry = {x=300, y=100, height=500, width=800},
     reapply = true,
     dont_focus_before_close  = false
 }
@@ -350,16 +350,6 @@ awful.rules.rules = {
     -- Rhythmbox
     { rule = { instance = "rhythmbox" },
       properties = { tag = "MUS" }
-    },
-
-    -- Virt-manager
-    { rule = { instance = "virt-manager" },
-      properties = { tag = "VIRT" }
-    },
-
-    -- OBS
-    { rule = { instance = "obs" },
-      properties = { tag = "REC" }
     },
 
     -- Mpv
