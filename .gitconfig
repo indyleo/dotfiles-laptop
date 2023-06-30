@@ -3,3 +3,4 @@
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	name = Indy
+	email = Indy@debian.org
