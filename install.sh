@@ -84,7 +84,7 @@ nala install polybar galculator kitty bleachbit timeshift transmission-gtk dconf
 echo "############################"
 echo "## Installing Media Stuff ##"
 echo "############################"
-nala install rhythmbox rhythmbox-plugins rhythmbox-data playerctl pavucontrol pamixer yt-dlp mpv peek vlc sxiv pulsemixer -y
+nala install rhythmbox rhythmbox-plugins rhythmbox-data playerctl pavucontrol pamixer yt-dlp mpv peek vlc sxiv pulsemixer mediainfo -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
