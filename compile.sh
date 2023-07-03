@@ -6,8 +6,8 @@ builddir=$(pwd)
 echo "########################################"
 echo "## Adding Some Directories, And Files ##"
 echo "########################################"
-mkdir -pv ~/Github ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
-touch ~/.cache/zsh/history 
+mkdir -pv ~/Github ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
+touch ~/.cache/history 
 
 echo "#########################"
 echo "## Shell Color Scripts ##"
@@ -16,7 +16,6 @@ cd ~/Github
 git clone https://gitlab.com/dwt1/shell-color-scripts.git
 cd shell-color-scripts
 sudo make install
-sudo cp completions/_colorscript /usr/share/zsh/site-functions
 cd ~
 
 echo "################"
@@ -48,22 +47,10 @@ make
 sudo make install
 cd ~
 
-echo "######################"
-echo "## Picom Animations ##"
-echo "######################"
-cd ~/Github
-git clone https://github.com/FT-Labs/picom.git
-cd picom
-git submodule update --init --recursive
-meson setup --buildtype=release . build
-ninja -C build
-sudo ninja -C build install
-cd ~
-
 echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
-go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
+go install github.com/charmbracelet/glow@latest
 
 echo "##################"
 echo "## Rust Install ##"
@@ -109,23 +96,14 @@ mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv -v xfce4 Thunar polybar neofetch nvim ranger awesome picom sxhkd kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
-rm -v ~/.bashrc ~/.profile ~/.zshenv
-mv -v .gitconfig .bashrc .zshrc .zshenv .aliasrc .functionrc .profile .xsession .Xresources ~/
+rm -v ~/.bashrc ~/.profile
+mv -v .gitconfig .bashrc .profile .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
-
-echo "#################"
-echo "## Zsh Plugins ##"
-echo "#################" 
-cd ~/Zsh/Plugins
-git clone https://github.com/hlissner/zsh-autopair.git
-git clone https://github.com/MichaelAquilina/zsh-you-should-use.git
-git clone https://github.com/zsh-users/zsh-completions.git
-git clone https://github.com/zsh-users/zsh-history-substring-search.git
-cd ~
 
 echo "###################"
 echo "## Cursors Theme ##"
 echo "###################" 
+mkdir -v ~/.icons  
 cd ~/Github
 git clone https://github.com/alvatip/Nordzy-cursors.git
 cd Nordzy-cursors
@@ -140,6 +118,7 @@ wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 echo "###############"
 echo "## GTK Theme ##"
 echo "###############" 
+mkdir -v ~/.themes
 cd ~/.themes
 git clone https://github.com/EliverLara/Nordic.git
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
