@@ -44,7 +44,7 @@ fi
 export EDITOR="nvim"
 export VISUAL="nvim"
 export PAGER="less"
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANPAGER="less"
 export TERM="xterm-256color"
 export TERMINAL="kitty"
 export COLORTERM="truecolor"
