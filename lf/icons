@@ -118,7 +118,7 @@ fi             # FILE
 *.scala         
 *.go            
 *.dart          
-*.xul           
+*.xul            
 *.sln           
 *.suo           
 *.pl            
